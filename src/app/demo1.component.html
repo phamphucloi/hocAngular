@@ -1,0 +1,29 @@
+Hello <br />
+
+id : {{id}} <br />
+userName : {{username}} <br />
+status : {{status ? "Male" : "Female"}} <br />
+phone : {{phone}}
+
+<table width="{{width}}" border="{{border}}" style="background:{{backgroundColor}}" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Status</th>
+            <th>Phone</th>
+            <th>Photo</th>
+            <th>Img</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{id}}</td>
+            <td>{{username}}</td>
+            <td>{{status}}</td>
+            <td>{{phone}}</td>
+            <td><img title="#" src="assets/images/anh.png" width="{{width}}"></td>
+            <td><img src="../assets/images/{{photo}}" width="{{width}}" alt=""></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,64 @@
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Photo</th>
+        <th>Subtotal</th>
+    </tr>
+
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+        <td><img src="../assets/images/{{product.photo}}" alt=""></td>
+        <td>{{product.quantity*product.price}}</td>
+    </tr>
+</table>
+
+<ol>
+    <li *ngFor="let ten of name">
+        {{ten}}
+    </li>
+</ol>
+
+<ol>
+    <ng-container *ngFor="let ten of name">
+        <li>{{ten}}</li>
+    </ng-container>
+</ol>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Photo</th>
+        <th>Subtotal</th>
+    </tr>
+
+    <ng-container *ngFor="let product of products">
+        <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td><img src="../assets/images/{{product.photo}}" alt=""></td>
+            <td>{{product.quantity*product.price}}</td>
+        </tr>
+    </ng-container>
+
+    <tr>
+        <td>Subtotal</td>
+        <td colspan="5" align="right">123</td>
+    </tr>
+</table>
+
+<span *ngIf="!status ; else hides" style="color:{{status?'red':'green'}}">Show</span>
+
+<ng-template #hides>
+    <span style="color:aqua">Hide</span>
+</ng-template>

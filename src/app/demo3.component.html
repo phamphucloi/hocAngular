@@ -1,0 +1,67 @@
+<style>
+   
+    .test{
+        width: 100px;
+        height: 100px;
+        ;
+    }
+</style>
+
+abc
+
+<h1>{{id}}</h1>
+
+<table border="{{border}}" style="background-color:{{backgroundColor}}">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+    </tr>
+
+    <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.dob | date : 'short'}}</td>
+    </tr>
+</table>
+<!-- style="background-color: linear-gradient(to right, rgba(#FC21BE,#D029E6,#A721FC),rgba(#C6FF0B,#D029E6,#53FC21))" -->
+<table border="{{border}}" style="background-color: aqua">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- <ng-container *ngFor="const student of students">
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.gender?"Male":"Female"}}</td>
+                <td>{{student.dob}}</td>
+            </tr>
+        </ng-container> -->
+        <ng-container *ngFor="let student of students">
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.gender?"Male":"Female"}}</td>
+                <td>{{student.dob | date: 'short'}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+
+<div>
+    <div style="width: 100px; height: 100px;">    
+    </div>
+
+    <div class="test" style="background-color: {{background.mau1}}">
+
+    </div>
+</div>
