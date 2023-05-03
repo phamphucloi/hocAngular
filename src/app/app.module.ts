@@ -25,6 +25,6 @@ import { LearingModuleComponent } from './learing-module/learing-module.componen
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [Demo3Component]
+  bootstrap: [LearingModuleComponent]
 })
 export class AppModule { }
