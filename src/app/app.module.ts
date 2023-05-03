@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { Demo1Component } from './demo1.component';
 import { Demo2Component } from './demo2.component';
 import { Demo3Component } from './demo3.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -14,7 +15,8 @@ import { Demo3Component } from './demo3.component';
     AppComponent,
     Demo1Component,
     Demo2Component,
-    Demo3Component
+    Demo3Component,
+    TestComponent
   ],
   imports: [
     BrowserModule,
