@@ -7,6 +7,7 @@ import { Demo1Component } from './demo1.component';
 import { Demo2Component } from './demo2.component';
 import { Demo3Component } from './demo3.component';
 import { TestComponent } from './test/test.component';
+import { LearingModuleComponent } from './learing-module/learing-module.component';
 
 
 
@@ -16,7 +17,8 @@ import { TestComponent } from './test/test.component';
     Demo1Component,
     Demo2Component,
     Demo3Component,
-    TestComponent
+    TestComponent,
+    LearingModuleComponent
   ],
   imports: [
     BrowserModule,
