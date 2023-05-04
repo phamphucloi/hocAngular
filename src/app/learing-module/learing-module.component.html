@@ -4,3 +4,43 @@
 
 <strong>My old {{old}}</strong>
 
+<br />
+
+<div *ngIf="old >= 20; then test else test2">
+
+</div>
+
+<ng-template #test>
+    test
+</ng-template>
+
+<ng-template #test2>
+    test 2
+</ng-template>
+
+<br><br><br>
+
+<input type="checkbox" [(ngModel)]="showBtn">
+
+<input type="text" value="{{Name}}" [(ngModel)]="Name">
+
+<p>Hello {{Name}}</p>
+
+<button type="button" class="btn btn-primary" (click)="reset()" [(ngModel)]="showBtn">Click</button>
+
+<p *ngIf="showBtn">213</p>
+
+<p *ngIf="!showBtn">456</p>
+
+
+<div *ngIf="showBtn; then text1 else text2">
+
+</div>
+
+<ng-template #text1>
+    123
+</ng-template>
+
+<ng-template #text2>
+    456
+</ng-template>
