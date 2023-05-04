@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Fruits } from '../Models/fruits.models';
 
 @Component({
   selector: 'app-learing-module',
@@ -9,33 +10,34 @@ export class LearingModuleComponent implements OnInit {
 
   Name: string;
 
-  public old = 20;
-
-  gender: DynamicsCompressorNode;
+  public old = 10;
 
   public userName = "Phạm Phúc Lợi";
 
   showBtn:boolean;
 
-  text: string[];
-
   public reset(): void{
-
-    this.showBtn = true;
-
-    console.log(!this.showBtn);
-    
     !this.showBtn;
   }
+
+  fruit:Fruits[];
   
   ngOnInit(): void {
     this.Name = "Phạm Phúc Lợi handsome";
 
-    this.text = [
-      'Text 1', 'Text 2'
-    ]
-
     this.showBtn = true;
+
+    this.fruit = [
+      {
+        giatri: "oi"
+      },
+      {
+        giatri: "cam"
+      },
+      {
+        giatri: "mit"
+      }
+    ]
 
   }
 

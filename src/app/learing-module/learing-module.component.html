@@ -1,46 +1,44 @@
-<p>learing-module works!</p>
-
-<strong>My name {{Name}}</strong>
-
-<strong>My old {{old}}</strong>
-
-<br />
-
-<div *ngIf="old >= 20; then test else test2">
-
-</div>
-
-<ng-template #test>
-    test
-</ng-template>
-
-<ng-template #test2>
-    test 2
-</ng-template>
-
-<br><br><br>
-
 <input type="checkbox" [(ngModel)]="showBtn">
 
-<input type="text" value="{{Name}}" [(ngModel)]="Name">
+<p *ngIf="showBtn; then test1 else test2">
 
-<p>Hello {{Name}}</p>
+</p>
 
-<button type="button" class="btn btn-primary" (click)="reset()" [(ngModel)]="showBtn">Click</button>
+<input type="text" [(ngModel)]="old">
 
-<p *ngIf="showBtn">213</p>
-
-<p *ngIf="!showBtn">456</p>
-
-
-<div *ngIf="showBtn; then text1 else text2">
-
+<div [ngSwitch]="old">
+    <div *ngSwitchCase="1">123</div>
+    <div *ngSwitchCase="2">2</div>
+    <div *ngSwitchCase="3">3</div>
+    <div *ngSwitchCase="4">4</div>
+    <div *ngSwitchCase="5">5</div>
+    <div *ngSwitchCase="6">6</div>
+    <div *ngSwitchCase="7">7</div>
+    <div *ngSwitchCase="8">8</div>
+    <div *ngSwitchCase="9">9</div>
+    <div *ngSwitchCase="10">10</div>
 </div>
 
-<ng-template #text1>
+<ng-template #tp1>
+    Dat diem cao
+</ng-template>
+
+<ng-template #tp2>
+    Dat diem thap
+</ng-template>
+
+<ng-template #tp3>
+    Khong phai diem
+</ng-template>
+
+<ng-template #test1>
     123
 </ng-template>
 
-<ng-template #text2>
+<ng-template #test2>
     456
 </ng-template>
+
+<ul *ngFor="let fr of fruit; let i = index">
+     <li>{{ i + 1 }}. {{fr.giatri}}</li>
+</ul>
