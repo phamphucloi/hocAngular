@@ -39,6 +39,4 @@ export class Demo5Component implements OnInit {
 
         this.category = this.categories[0];
     }
-    
-   
 }

@@ -1,0 +1,11 @@
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+}

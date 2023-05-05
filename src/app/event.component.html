@@ -1,0 +1,29 @@
+<button (click)="ClickMe($event)">Click</button>
+
+<br>
+
+<button value="#F00" (click)="changeBackground($event)">Màu đỏ</button>
+<button value="#96ec67" (click)="changeBackground($event)">Màu xanh</button>
+<button value="#fffccc" (click)="changeBackground($event)">Màu vàng</button>
+<button value="#cccfff" (click)="changeBackground($event)">Màu tím</button>
+<br> <br>
+<div style="width: {{width}}px; height: {{height}}px; border-radius: 50%; background-color:{{background}}"></div>
+
+<br> <br>
+<button value="100x100" (click)="resize($event)">100x100</button>
+<button value="200x200" (click)="resize($event)">200x200</button>
+<button value="300x300" (click)="resize($event)">300x300</button>
+<br> <br>
+<img id="root" src="{{path}}" width="{{width}}" height="{{height}}">
+
+<div>
+    <img src="./assets/images/anh.png" width="200px" height="200px" (click)="changePath($event)">
+    <img src="./assets/images/mia.png" width="200px" height="200px" (click)="changePath($event)">
+    <img src="./assets/images/kimna.png" width="200px" height="200px" (click)="changePath($event)">
+</div>
+
+<hr>
+
+<h1>Event Key up</h1>
+
+<input type="text" placeholder="text..." (keyup)="getText($event)">
