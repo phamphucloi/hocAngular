@@ -30,8 +30,6 @@ export class EventComponent implements OnInit{
         // this.width = e.target.value.split('x')[0];
 
         // this.height = e.target.value.split('x')[1];
-
-
         var val = e.target.value.split('x');
 
         this.width = val[0];
