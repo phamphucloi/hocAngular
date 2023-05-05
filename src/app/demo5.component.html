@@ -1,0 +1,12 @@
+<h3>Change Event</h3>
+
+<select (change)="getValue($event)">
+    <ng-container *ngFor="let cate of categories">
+        <option value="{{cate.id}}">{{cate.name}}</option>
+    </ng-container>
+</select>
+
+<p>Bạn vừa chọn là : {{name}}</p>
+
+<p>Id danh mục : {{category.id}}</p>
+<p>Name danh mục : {{category.name}}</p>

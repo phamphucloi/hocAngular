@@ -8,6 +8,12 @@ import { Color } from './Models/color.models';
 })
 
 export class Demo3Component implements OnInit {
+    
+    pathImage: string;
+
+    width: string;
+
+    height: string;
 
     id:number;
 
@@ -21,7 +27,47 @@ export class Demo3Component implements OnInit {
 
     background: Color;
 
+    photo: string[];
+    
+    clickMe(){
+
+        alert(123);
+
+    }
+    
+    change(event: any){
+        var rs = event.target.value;
+    }
+
+
+
+    resize(event: any){
+        var rs = event.target.value.split('x');
+
+        this.width = rs[0];
+
+        this.height = rs[1];
+    }
+
+    changeImg(path: any){
+
+        this.pathImage = path.target.src;
+
+    }
+
+
     ngOnInit(): void {
+
+        this.photo = [
+            "assets/images/anh.png", "assets/images/mia.png","assets/images/kimna.png"
+        ];
+
+        this.pathImage = "assets/images/anh.png";
+
+        this.width = '200';
+
+        this.height = '200';
+
 
         this.border = 1;
 

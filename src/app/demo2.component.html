@@ -33,14 +33,17 @@
 <table border="1">
     <tr>
         <th>Id</th>
-        <th>Name</th>
+        <th>Name
+            <input type="text" (keyup)="filter($event)">
+
+        </th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Photo</th>
         <th>Subtotal</th>
     </tr>
 
-    <ng-container *ngFor="let product of products">
+    <ng-container *ngFor="let product of rs">
         <tr>
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>

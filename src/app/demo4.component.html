@@ -1,0 +1,22 @@
+<h1>Key up</h1>
+
+<input type="text" (keyup)="display($event)">
+
+<input type="button" value="click" (keyup.enter)="display2($event)">
+
+<h1>Temp Convert</h1>
+
+<input type="text" placeholder="C..." (keyup)="display3($event)">
+
+<p>ĐỘ F : {{f}}</p>
+
+<h3>Search : </h3>
+
+<input type="text" placeholder="Keyword..." (keyup)="filter($event)">
+<br >
+
+<ul>
+    <ng-container *ngFor="let ten of rs">
+        <li>{{ten}}</li>
+    </ng-container>
+</ul>

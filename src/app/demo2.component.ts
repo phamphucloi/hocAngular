@@ -12,6 +12,19 @@ export class Demo2Component implements OnInit {
     name : string[];
     products : Product[];
     status : boolean;
+    rs : Product[];
+
+    filter(e : any){
+        var val = e.target.value.toLowerCase();     
+
+        this.rs = [];
+
+        for(var i = 0; i < this.products.length; i++){
+            if(this.products[i].name.toLowerCase().includes(val)){
+                this.rs.push(this.products[i]);
+            }
+        }
+    }
 
     ngOnInit(): void {
         this.product = {
@@ -56,6 +69,8 @@ export class Demo2Component implements OnInit {
         ]
 
         this.status = true;
+
+        this.rs = this.products;
 
     }
 }

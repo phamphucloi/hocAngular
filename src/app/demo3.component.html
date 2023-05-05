@@ -75,3 +75,27 @@ abc
 </div>
 
 <h2 class="abc" style="color: yellow">Phạm Phúc Lợi</h2>
+
+<h2 class="abc" style="color: yellow">Click</h2>
+
+<input type="button" value="Clikc" (click)="clickMe()">
+
+<input type="button" value="#cccfff" (click)="change($event)">
+<input type="button" value="#fffccc" (click)="change($event)">
+<input type="button" value="#96e367" (click)="change($event)">
+<input type="button" value="#340640" (click)="change($event)">
+<br><br>
+
+<input type="button" value="100x100" (click)="resize($event)"> &nbsp;
+<input type="button" value="200x200" (click)="resize($event)"> &nbsp;
+<input type="button" value="300x300" (click)="resize($event)">
+<br><br>
+<img id="anh" src="{{pathImage}}" alt="" width="300" height="300">
+<br><br><br>
+<div style="width: {{width}}px; height: {{height}}px; display: flex; justify-content: space-between;">
+    <ng-container *ngFor="let pic of photo">
+        <img src="{{pic}}" alt="" (click)="changeImg($event)">
+    </ng-container>
+</div>
+
+
