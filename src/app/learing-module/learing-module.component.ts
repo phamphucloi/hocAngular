@@ -29,13 +29,22 @@ export class LearingModuleComponent implements OnInit {
 
     this.fruit = [
       {
-        giatri: "oi"
+        giatri: "oi",
+        evaluate: true,
+        colour: "#cccfff",
+        price: 5
       },
       {
-        giatri: "cam"
+        giatri: "cam",
+        evaluate: true,
+        colour: "#fffccc",
+        price: 15
       },
       {
-        giatri: "mit"
+        giatri: "mit",
+        evaluate: false,
+        colour: "#96e367",
+        price: 25
       }
     ]
 

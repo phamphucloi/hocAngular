@@ -10,6 +10,7 @@ import { Demo2Component } from './demo2.component';
 import { Demo3Component } from './demo3.component';
 import { TestComponent } from './test/test.component';
 import { LearingModuleComponent } from './learing-module/learing-module.component';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LearingModuleComponent } from './learing-module/learing-module.componen
     Demo2Component,
     Demo3Component,
     TestComponent,
-    LearingModuleComponent
+    LearingModuleComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,
