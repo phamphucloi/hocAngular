@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgSwitchCase } from '@angular/common';
+import { Routes } from '@angular/router';
 
 //Học thầy Trí.
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,16 @@ import { EventComponent } from './event.component';
 //Học trên ytb.
 import { LearingModuleComponent } from './learing-module/learing-module.component';
 import { TestPipe } from './test.pipe';
+import { BoldDirective } from './Directives/bold.directive';
+import { ComboboxComponent } from './combobox/combobox.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const routes: Routes = [
+  { path: 'first-component', component: LearingModuleComponent },
+  { path: 'second-component', component: ComboboxComponent },
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+];
+
 
 @NgModule({
   declarations: [
@@ -30,7 +41,10 @@ import { TestPipe } from './test.pipe';
     TestPipe,
     Demo4Component,
     Demo5Component,
-    EventComponent
+    EventComponent,
+    BoldDirective,
+    ComboboxComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +53,6 @@ import { TestPipe } from './test.pipe';
     NgSwitchCase
   ],
   providers: [],
-  bootstrap: [EventComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
