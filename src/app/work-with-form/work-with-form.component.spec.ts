@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LearingModuleComponent } from './learing-module.component';
+import { WorkWithFormComponent } from './work-with-form.component';
 
-describe('LearingModuleComponent', () => {
-  let component: LearingModuleComponent;
-  let fixture: ComponentFixture<LearingModuleComponent>;
+describe('WorkWithFormComponent', () => {
+  let component: WorkWithFormComponent;
+  let fixture: ComponentFixture<WorkWithFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LearingModuleComponent ]
+      declarations: [ WorkWithFormComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LearingModuleComponent);
+    fixture = TestBed.createComponent(WorkWithFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
