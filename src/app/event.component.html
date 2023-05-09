@@ -27,3 +27,40 @@
 <h1>Event Key up</h1>
 
 <input type="text" placeholder="text..." (keyup)="getText($event)">
+
+<pre>Mày viết là : {{text}}</pre>
+
+<table border="0" cellspacing="0" cellpadding="9">
+    <tr>
+        <th>Id</th>
+        <th>Name 
+            <input type="text" (keyup)="search($event)">
+        </th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Photo</th>
+    </tr>
+
+    <ng-container *ngFor="let pro of product">
+        <tr>
+            <td>{{pro.id}}</td>
+            <td>{{pro.name}}</td>
+            <td>{{pro.price}}</td>
+            <td>{{pro.quantity}}</td>
+            <td><img src="{{pro.photo}}" width="100" height="100"></td>
+        </tr>
+    </ng-container>
+</table>
+
+<hr>
+
+<label for="a">Select : </label>
+
+<select id="a" (change)="changeValue($event)">
+    <ng-container *ngFor="let cates of category">
+        <option value="{{cates.id}}">{{cates.name}}</option>
+    </ng-container>
+</select>
+
+<p>Id là : {{cate.id}}</p>
+<p>Name là : {{cate.name}}</p>

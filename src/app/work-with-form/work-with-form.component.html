@@ -1,0 +1,15 @@
+<p>work-with-form works!</p>
+
+<form (ngSubmit)="subMitForm()">
+    <label for="name">First name : </label> <br>
+    <input type="text" id="fname" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    <br>
+    <label for="name">Last name : </label> <br>
+    <input type="text" name="lname" value="Phúc Lợi" id="lname">
+    <br>
+    <!-- Cách 1 -->
+    <input type="submit" value="Submit" (click)="subMitForm()">
+
+    <!-- Cách 2 -->
+    <input type="submit" value="Submit 2">
+</form>

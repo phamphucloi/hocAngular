@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Category } from "./Models/category.models";
+import { GlobalVariableService } from "./Services/global-variable.service";
 
 
 @Component({
@@ -28,7 +29,27 @@ export class Demo5Component implements OnInit {
         }
     }
 
+    public userName: any;
+
+    constructor(private assignment: GlobalVariableService){}
+
+    num: number;
+
+    a: number;
+
+    b: number;
+
     ngOnInit(): void {
+
+        this.a = this.assignment.getA();
+
+        this.assignment.setA(15);
+
+        this.num = this.assignment.ngOninit(3);
+
+
+        this.userName = 'user';
+
         this.categories = [
             {id: 1, name: 'Cá'},
             {id: 2, name: 'Thịt'},

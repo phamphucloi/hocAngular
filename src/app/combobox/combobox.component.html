@@ -1,0 +1,16 @@
+<p>combobox works!</p>
+
+<label for="city">Choose your city : </label>
+
+<select name="" id="city" (change)="changeValue($event)">
+    <ng-container *ngFor="let city of cities">
+        <option value="{{ city.id }}">{{city.name}}</option>
+    </ng-container>
+</select>
+
+<label for="district">Choose your district's city : </label>
+<select name="district" id="district">
+    <ng-container *ngFor="let city of district">
+            <option>{{city}}</option>
+    </ng-container>
+</select>
